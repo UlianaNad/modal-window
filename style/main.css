@@ -16,8 +16,8 @@ body {
   margin: 0 auto;
 }
 
-input {
-  width: 80%;
+input, select {
+  width: 70%;
   height: 30px;
   font-size: 20px;
   margin-bottom: 10px;
@@ -31,14 +31,15 @@ label {
 }
 
 h3 {
-  color: grey;
+  color: rgb(92, 92, 92);
+  padding-bottom: 5px;
 }
 
 button {
   color: rgb(34, 10, 10);
   background-color: rgb(181, 215, 253);
-  width: 80%;
-  height: 30px;
+  width: 70%;
+  height: 35px;
   border: 1px solid rgb(142, 218, 253);
   border-radius: 2px;
   font-size: 15px;
@@ -46,17 +47,21 @@ button {
   cursor: pointer;
 }
 
-.modal-window {
+.modal-window, .modal-window2 {
   position: absolute;
   padding-top: 40px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
   background-color: rgba(7, 7, 7, 0.3);
-  margin-top: -370px;
+  margin-top: -425px;
 }
 
 .modal-window:not(.show) {
+  display: none;
+}
+
+.modal-window2:not(.show) {
   display: none;
 }
 
@@ -64,9 +69,15 @@ button {
   text-align: center;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .back {
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 50%;
   margin: 0 auto;
   background-color: rgb(160, 160, 160);
 }

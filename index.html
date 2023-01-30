@@ -12,6 +12,7 @@
     <div class="container">
        <div class="central">
             <h1>Sign in</h1>
+            <br>
             <label for="email">Your email:</label>
             <br>
             <input type="email" name="email">
@@ -21,21 +22,32 @@
             <input type="password" name="password">
             <br>
             <br>
-            <button type="submit">SEND</button>
+            <button type="submit">SUBMIT</button>
             <br>
             <br>
-            <div class="container">
-                <h3>If you are not registered yet press </h3>
-                <button class="open" type="submit">REGISTRATION</button>
+
+            <div class="container flex">
+                <div>
+                    <h3>If you are not registered yet press </h3>
+                    <button class="open" type="submit" data-modal-id="modal-1">Registration</button>
+                </div>
+                <div>
+                    <h3>Forgot your password?</h3>
+                    <button class="reset" type="submit" data-modal-id="modal-2">Reset password</button>
+                </div>
+                
             </div>
+
+            <br>
+           
        </div>
     </div>
     
-    <div class="modal-window">
+    <div class="modal-window" id="modal-1">
         <div class="central back">
             <div class="header">
                 <h2>REGISTRATION</h2>
-                <button class="close">
+                <button class="close" data-button-id="close1" data-modal-id="modal-1">
                     <span>close</span>
                     <img src="./img/close.png" alt="">
                 </button>
@@ -49,6 +61,13 @@
             <br>
             <input type="name" name="name">
             <br>
+            <label for="gender">Your gender:</label>
+            <br>
+            <select name="gender" id="">
+                <option value="woman">woman</option>
+                <option value="man">man</option>
+            </select>
+            <br>
             <label for="password">Your password:</label>
             <br>
             <input type="password" name="password">
@@ -61,6 +80,24 @@
             <button type="submit">SEND</button>
         </div>
     </div>
+    <div class="modal-window2" id="modal-2">
+        <div class="central back">
+            <div class="header">
+                <h2>Reset the password</h2>
+                <button class="close" data-button-id="close2" data-modal-id="modal-2">
+                    <span>close</span>
+                    <img src="./img/close.png" alt="">
+                </button>
+            </div>
+            <label for="email">We will sent a new password to your email:</label>
+            <br>
+            <br>
+            <input type="email" name="email">
+            <br>
+            <button type="submit">SEND</button>
+        </div>
+    </div>
+
     <script src="./main.js"></script>
 </body>
 </html>

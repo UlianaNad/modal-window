@@ -1,13 +1,19 @@
-const openButton= document.querySelector('.open');
-const Modal = document.querySelector('.modal-window');
-const closeButton = document.querySelector('.close');
+const openButtons = document.querySelectorAll("[data-modal-id]");
+const closeButtons = document.querySelectorAll("[data-button-id]")
 
-openButton.addEventListener('click', () => {
-    console.log('click');
-    Modal.classList.add('show');
-});
+openButtons.forEach(button => {
+    button.addEventListener("click", () =>{
+        const modalId = button.dataset.modalId;
+        const modal = document.getElementById(modalId);
+        modal.classList.add("show");
+    })
+})
 
-closeButton.addEventListener('click', () => {
-    console.log('click');
-    Modal.classList.remove('show');
-});
+closeButtons.forEach(button => {
+    button.addEventListener("click", () =>{
+        console.log("button")
+        const modalId = button.dataset.modalId;
+        const modal = document.getElementById(modalId);
+        modal.classList.remove("show");
+    })
+})
